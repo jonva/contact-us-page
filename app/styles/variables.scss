@@ -1,0 +1,181 @@
+// All global variables go here...
+@import 'colors';
+@import 'font-face';
+
+// Global Layout Vars
+$global-margin: 50px;
+$global-padding: 20px;
+
+// Font Family
+$base-font-family: $font-sans-serif-text;
+
+// Font Colors
+$base-font-color: $gray-dark;
+$heading-font-color: $gray-white;
+$sub-heading-font-color: $brand-tan;
+$action-color: $brand-turquoise;
+$button-font-color: $gray-white;
+
+// Font Sizes
+$base-font-size: 1rem;
+$heading-font-size: $base-font-size * 2.111112;
+$sub-heading-font-size: $base-font-size * 1.555556;
+$placeholder-font-size: .95rem;
+
+// Font Weight
+$base-font-weight: normal;
+
+// Line height
+$base-line-height: 1.2;
+$heading-line-height: 1.5;
+$section-heading-line-height: 2;
+$mobile-touch-line-height: 2.5;
+
+// Text Transform
+$base-text-transform: normal;
+$heading-text-transform: uppercase;
+$section-heading-text-transform: uppercase;
+
+// Text Align
+$base-text-align: left;
+$heading-text-align: $base-text-align;
+$cyo-heading-text-align: center;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+// Border
+$base-border-color: $gray;
+$base-border: 1px solid $base-border-color;
+$base-dashed-border: 2px dashed $base-border-color;
+$base-border-radius: 0px;
+
+// Button
+$button-font-family: $base-font-family;
+$button-font-size: $base-font-size;
+$button-line-height: $heading-line-height;
+$button-font-color: $gray-white;
+$button-bg-color: $brand-red;
+$button-border-radius: $base-border-radius;
+$round-btn-border-radius: 50%;
+$round-btn-size: 50px;
+$round-btn-color: $gray-dark;
+$round-btn-image: '../images/selector-reset.svg';
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Spacing
+$base-spacing: $base-line-height * 1em;
+$medium-spacing: $base-line-height * 2em;
+$large-spacing: $base-line-height * 3em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+$section-heading-spacing: $base-spacing * 2;
+$page-title-spacing: $small-spacing;
+
+// Main Nav Vars
+$nav-menu-font-color:  $gray-white;
+$nav-menu-font-size: $heading-font-size * 2;
+$nav-menu-text-transform: none;
+$nav-menu-vert-spacing: $base-spacing / 3;
+
+// Footer Vars
+$footer-font-color:  $gray-white;
+$footer-font-size: $heading-font-size * 2;
+$footer-text-transform: none;
+$footer-vert-spacing: $base-spacing / 3;
+
+// Blockquote Vars
+$blockquote-font-family: $base-font-family;
+$blockquote-font-color: $brand-tan;
+$blockquote-font-size: $sub-heading-font-size;
+$blockquote-text-transform: none;
+
+// Banner Vars
+$banner-min-height: 300px;
+// mobile height will vary based on above var. Melissa TBD. Ex: @media mobile{ min-height: $banner-min-height / 2; }
+
+// Hero Vars
+$hero-font-color: $heading-font-color;
+$hero-heading-font-size: $base-font-size * 3.5;
+$hero-sub-heading-font-size: $base-font-size * 2;
+$hero-description-font-size: $base-font-size * 1.15;
+$hero-button-font-size: $base-font-size * 1.5;
+$hero-heading-line-height: 1.7;
+$hero-text-transform: uppercase;
+$hero-text-align: left;
+$hero-top-spacing: $base-spacing * 6;
+
+// Form Vars
+
+$form-font-color: $gray-darker;
+$form-heading-font-color:  $form-font-color;
+$form-heading-font-size: $heading-font-size;
+$form-line-height: $base-line-height;
+$form-sub-heading-font-size: $sub-heading-font-size;
+$form-heading-text-align: left;
+$form-options-text-align: center;
+$form-heading-spacing: 0;
+$form-input-field-border: 1px solid $gray;
+$form-input-field-focus: 2px solid $brand-turquoise;
+$form-input-field-padding: $small-spacing;
+$form-centered-spacing: $base-spacing * 3.5;
+
+
+// Selector Vars
+$selector-heading-text-align: center;
+
+$radio-selector-font-color:  $form-font-color;
+$radio-selector-heading-font-size: $heading-font-size;
+$radio-selector-sub-heading-font-size: $sub-heading-font-size;
+$radio-selector-options-text-align: center;
+$radio-selector-heading-spacing: 0;
+
+$checkbox-selector-heading-font-family: $base-font-family;
+$checkbox-selector-heading-font-color:  $gray-white;
+$checkbox-selector-font-color: $form-font-color;
+$checkbox-selector-heading-font-size: $sub-heading-font-size;
+$checkbox-selector-sub-heading-font-size: $sub-heading-font-size;
+
+$checkbox-selector-bg-color-odd: $gray-lightest;
+$checkbox-selector-bg-color-even: $gray-lighter;
+
+$checkbox-selector-options-text-align: left;
+$checkbox-selector-line-height: $heading-line-height;
+
+$price-font-family: $base-font-family;
+$price-font-size: $base-font-size;
+
+// Accordion Vars
+$accordion-trigger-font-color: $brand-red;
+$accordion-trigger-margin-top: $global-margin;
+$accordion-trigger-pad-left: $global-padding * 2;
+$accordion-trigger-close-img: '../images/acc-close.svg';
+$accordion-trigger-open-img: '../images/acc-open.svg';
+
+// Toggle Vars
+$toggle-trigger-font-color: $brand-red;
+$toggle-trigger-margin-top: $global-margin;
+$toggle-trigger-pad-right: $global-padding * 2;
+$toggle-trigger-close-img: '../images/arrow-down.svg';
+$toggle-trigger-open-img: '../images/arrow-up.svg';
+
+// Media Vars
+$media-heading-text-align: center;
+$media-body-text-align: center;
+$media-button-text-align: center;
+$media-headline-margin: $base-spacing;
+$media-body-margin: $base-spacing;
+$media-footer-margin: $base-spacing;
+
+$media-bottom-ratio-16-9: 18.35%; // traditional 16:9 ratio percentage 56.25%
+$media-bottom-ratio: $media-bottom-ratio-16-9;
+
+$media-padding: $base-spacing / 2;
+
+$media-border: 1px solid $gray-light;
+
+

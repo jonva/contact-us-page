@@ -1,0 +1,209 @@
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+@import "variables.scss";
+
+*{
+  font-family: $font-sans-serif-text;
+}
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+ 
+}
+.navbar-default .navbar-toggle .icon-bar{
+  background-color: $gray-white;
+}
+.navbar-brand.sapient-brand{
+  color: $gray-white;
+}
+.navbar-brand.sapient-brand:hover{
+  color: $gray-white;
+}
+/* Custom page header */
+.header {
+  margin-bottom: 10px;
+  border-bottom: 0px;
+  .navbar{
+    background-color: $brand-red;
+    ul{
+      li{
+        a{
+          color: $gray-white;
+        }
+      }
+    }
+  }
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+
+.contact-us{
+  padding: 0 15px;
+  *{
+    color: $gray-dark;
+  }
+  h1{
+    padding-bottom: $small-spacing;
+    margin-bottom: $base-spacing;
+    border-bottom: $base-border;
+  }
+  aside{
+    div{
+      div{
+        div{
+          ol{
+            bottom:-10px;
+          }
+        }
+      }
+    }
+  }
+  article{
+    div.form-submit{
+        padding: $small-spacing;
+        background-color: $lime-green;
+        border: $base-border;
+        border-radius: $base-border-radius;
+        
+      }
+    >div{
+      margin-bottom: $base-spacing;
+      text-align: justify;
+      form{
+        fieldset{
+          div.left-form{
+          }
+          div.right-form{
+                font-size: $base-font-size;
+
+              border: $base-border;
+            div{
+              background-color: rgba(249, 245, 245, 0.7);
+              padding: $small-spacing;
+              margin-bottom: 0;
+              div.inset{
+                padding-left: $base-spacing;
+                border: none;
+              }
+            }
+
+          }
+          div.form-group{
+            &.has-error{
+              input{
+                color: $brand-red;
+                background-color: $light-red;
+                box-shadow: none !important;
+              }
+              span{
+                display: block;
+                color: $brand-red;
+                margin-bottom: 0;
+
+                font-size: $base-font-size;
+
+              }
+            }
+            input{
+
+            }
+            span{
+              display: none;
+            }
+            div{
+              button{
+                background-color: transparent;
+                color: $gray-dark;
+                border: $base-border;
+                box-shadow: none !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.carousel-text{
+  font-size: $base-font-size;
+  position: relative;
+  height: 120px;
+  background-color: $lime-green-opaque;
+  h3{
+    margin-top: 0px;
+  }
+}
+.carousel-indicators .active {
+    margin: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    border: 0px;
+    margin: 0 2px;
+    }
+.sapient-brand{
+  padding-left: 50px;
+  background: url('../images/sapient-logo.svg') left no-repeat;
+  background-size: 50px 50px;
+}
+.carousel-control.right, .carousel-control.left{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.0000) 0%, rgba(0, 0, 0, 0.0) 0%);
+  opacity: 0.1;
+  margin-top: 30px;
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}

@@ -1,0 +1,91 @@
+<div class="row contact-us" ng-controller="ContactusCtrl">
+    <h1 class="title">Contact Us</h1>
+    <article class="col-sm-8 col-sm-push-4">
+        <div class="row content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed sapien quam. Sed dapibus est id enim facilisis, at posuere turpis adipiscing. Quisque sit amet dui dui. Duis rhoncus velit nec est condimentum feugiat. Donec aliquam augue nec gravida lobortis. Nunc arcu mi, pretium quis dolor id, iaculis euismod ligula. Donec tincidunt gravida lacus eget lacinia.
+        </div>
+        <div class="row form-submit" ng-show="formSubmitted">Form submitted successfully</div>
+        <div class="form-container row">
+            <form class="form-horizontal" name="contactForm">
+                <fieldset>
+                    <div class="col-sm-6 left-form">
+                        <!-- Text input-->
+                        <div class="form-group" ng-class="{ 'has-error': contactForm.name.$invalid && !contactForm.name.$pristine }">
+                            <div class="col-md-12">
+                                <input name="name" type="text" placeholder="Firstname Lastname" class="form-control input-md" ng-model="user.name" required>
+                                <span class="help-block pull-right">Name Required</span>
+                            </div>
+                        </div>
+                        <!-- Password input-->
+                        <div class="form-group" ng-class="{ 'has-error': contactForm.password.$invalid  && !contactForm.password.$pristine}">
+                            <div class="col-md-12">
+                                <input name="password" type="password" placeholder="Password" class="form-control input-md" ng-model="user.password" required>
+                                <span class="help-block pull-right">Password required</span>
+                            </div>
+                        </div>
+                        <!-- Password input-->
+                        <div class="form-group" ng-class="{ 'has-error': contactForm.confirmpassword.$invalid  && !contactForm.confirmpassword.$pristine || (!contactForm.confirmpassword.$pristine && user.confirmpassword!=user.password)}">
+                            <div class="col-md-12">
+                                <input name="confirmpassword" type="password" placeholder="Confirm password" class="form-control input-md" required ng-model="user.confirmpassword">
+                                <span class="help-block pull-right">Passwords don't match</span>
+                            </div>
+                        </div>
+                        <!-- Text input-->
+                        <div class="form-group" ng-class="{ 'has-error': contactForm.email.$invalid  && !contactForm.email.$pristine}">
+                            <div class="col-md-12">
+                                <input name="email" type="email" placeholder="Email" class="form-control input-md" required ng-model="user.email">
+                                <span class="help-block pull-right">Invalid email</span>
+                            </div>
+                        </div>
+                        <!-- Text input-->
+                        <div class="form-group" ng-class="{ 'has-error': contactForm.website.$invalid  && !contactForm.website.$pristine}">
+                            <div class="col-md-12">
+                                <input name="website" type="url" placeholder="http://website.com" class="form-control input-md" required ng-model="user.website">
+                                <span class="help-block pull-right">Invalid URL</span>
+                            </div>
+                        </div>
+                        <!-- Button -->
+                        <div class="form-group">
+                            <div class="col-md-12 pull-right">
+                                <button id="singlebutton" name="singlebutton" class="btn btn-primary" ng-click="formSubmitted='true'">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 right-form">
+                      <h3>Business Unit</h3>
+                        <div class="form-group" ng-class="{ 'has-error': false}">
+                            <div class="">
+                                <input class="xs-col-2" name="all" type="checkbox" class="form-control" ng-click="selectAll()" ng-model="selectAllVal">
+                                <label for="all">
+                                    Sapient
+                                </label>
+                                <span class="help-block pull-right">Invalid URL</span>
+                            </div>
+                            <div class="inset" ng-repeat="sapient in sapients">
+                                <input class="xs-col-2" name="{{sapient.name}}" type="checkbox" ng-model="sapient.selected" class="form-control">
+                                <label for="{{sapient.name}}">
+                                    {{sapient.name}}
+                                </label>
+                                <span class="help-block pull-right">Invalid URL</span>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </article>
+    <aside class="col-sm-4 col-sm-pull-8">
+        <div>
+            <div>
+                <carousel interval="" no-wrap="noWrapSlides">
+                    <slide ng-repeat="slide in carouselData" active="slide.active">
+                        <img ng-src="./{{slide.image}}" style="margin:auto;">
+                        <article class="carousel-text">
+                          <h3>{{slide.heading}}</h3>
+                          <p>{{slide.text}}</p>
+                    </slide>
+                </carousel>
+            </div>
+        </div>
+    </aside>
+</div>

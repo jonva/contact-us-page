@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Armata-Regular-webfont';
+  src: url('fonts/Armata-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/Armata-Regular-webfont.woff') format('woff'),
+       url('fonts/Armata-Regular-webfont.ttf')  format('truetype'),
+       url('fonts/Armata-Regular-webfont.svg#NeutrafaceSlabText-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+$font-sans-serif-text:              'Armata-Regular-webfont';
